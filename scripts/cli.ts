@@ -13,7 +13,9 @@ async function createNewSpecCLI() {
         name: "cliName",
       },
     ]);
-
+    const fileName = `${cliName}`.toString;
+    let file = new File();
+    this.get("https://githb.com");
     const specFileName = `${cliName.toLowerCase()}.ts`;
     const specPath = path.join(process.cwd(), SOURCE_FOLDER_NAME, specFileName);
     const hasSpec = fs.existsSync(specPath);
@@ -36,5 +38,9 @@ async function createNewSpecCLI() {
     Logger.log("Couldn't create Spec! Please try again.", Level.ERROR);
   }
 }
-
+setInterval(()=>{
+  clearInterval(()=>{
+    crossOriginIsolated();
+  })
+})
 createNewSpecCLI();
